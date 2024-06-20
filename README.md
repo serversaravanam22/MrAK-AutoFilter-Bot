@@ -107,7 +107,7 @@ restart - ʀᴇꜱᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ...
 <details><summary>Deploy To Heroku</summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/mraktech/MrAKlinkZz-Bot">
+<a href="https://heroku.com/deploy?template=https://github.com/MrAKTech/MrAK-AutoFilter-Bot">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy To Heroku">
 </a>
 </p>
@@ -119,7 +119,7 @@ restart - ʀᴇꜱᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ...
 <br>
 <br>
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/mraktech/MrAKlinkZz-Bot&branch=main&name=MrAKlinkZz-Bot )
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/MrAKTech/MrAK-AutoFilter-Bot&branch=main&name=MrAK-AutoFilter-Bot)
 </details>
 
 <details><summary>Deploy To Render</summary>
@@ -146,7 +146,7 @@ Use these settings when adding a monitor:</b>
 <b>Click on the below button to deploy directly to render ↓</b>
 <br>
 <br>
-<a href="https://render.com/deploy?repo=https://github.com/mraktech/MrAKlinkZz-Bot/tree/main">
+<a href="https://render.com/deploy?repo=https://github.com/MrAKTech/MrAK-AutoFilter-Bot/tree/main">
 <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a>
 </details>
@@ -154,7 +154,7 @@ Use these settings when adding a monitor:</b>
 <details><summary>Deploy To VPS</summary>
 <p>
 <pre>
-git clone https://github.com/mraktech/MrAKlinkZz-Bot
+git clone https://github.com/MrAKTech/MrAK-AutoFilter-Bot
 # Install Packages
 pip3 install -U -r requirements.txt
 Edit info.py with variables as given below then run bot
@@ -167,7 +167,7 @@ python3 bot.py
 
 
 ## Thanks to 
- - Thanks To [𝐈 𝐀𝐦 𝙼𝚁𝗔𝗞](https://telegram.me/I_Am_MrAK) for customising this amazing [Repo](https://github.com/mraktech/MrAKlinkZz-Bot).
+ - Thanks To [𝐈 𝐀𝐦 𝙼𝚁𝗔𝗞](https://telegram.me/I_Am_MrAK) for customising this amazing [Repo](https://github.com/MrAKTech/MrAK-AutoFilter-Bot).
 
 ## Note 🏷️
  
