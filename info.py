@@ -13,34 +13,34 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+API_ID = int(environ.get('API_ID', '20902603'))
+API_HASH = environ.get('API_HASH', '79e5caa103a9e9fb0183390b4800845d')
+BOT_TOKEN = environ.get('BOT_TOKEN', "7358459130:AAFG4DwbmI5rfyN9LMB410nEsYmgsZig5EE")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://graph.org/file/8cd764fbdf3ccd34abe22.jpg')).split() #SAMPLE PIC
-NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/8cd764fbdf3ccd34abe22.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/85d361ab4cb6511006022.mp4")
+PICS = (environ.get('PICS', 'https://envs.sh/kwZ.jpg https://envs.sh/kw5.jpg https://envs.sh/kwG.jpg https://envs.sh/kwY.jpg https://envs.sh/kwC.jpg ')).split() #SAMPLE PIC
+NOR_IMG = environ.get("NOR_IMG", "https://envs.sh/kw1.jpg")
+MELCOW_VID = environ.get("MELCOW_VID", "https://envs.sh/kwU.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/86b7b7e2aa7e38f328902.jpg")
-SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://graph.org/file/54339913c153df35e5a54.jpg'))
-CODE = (environ.get('CODE', 'https://graph.org/file/f96562518138b9132abf8.jpg'))
+SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://envs.sh/kwl.jpg'))
+CODE = (environ.get('CODE', '0'))
 
 #stream link shortner
 STREAM_SITE = (environ.get('STREAM_SITE', 'publicearn.com'))
-STREAM_API = (environ.get('STREAM_API', '5f14184b5d330486d0ebcb32127fdca5b03c8b42'))
-STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/MrAK_LinkZz/5'))
+STREAM_API = (environ.get('STREAM_API', 'bcb93413e5dd9aaf092ab03269420e6f928aae2c'))
+STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/sasukemovieschannel'))
 
 #REFERAL
-REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '15')) # number of referal count
+REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '255')) # number of referal count
 REFERAL_PREMEIUM_TIME = environ.get('REFERAL_PREMEIUM_TIME', '1month')
 # add premium logs channel id
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002122060084'))
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002271986248'))
 
 # Admins, Channels & Users
-USERNAME = environ.get("USERNAME", "https://t.me/I_Am_MrAK")
+USERNAME = environ.get("USERNAME", "https")
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6072149828').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002145921498').split()] #Channel id for auto indexing ( make sure bot is admin )
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
