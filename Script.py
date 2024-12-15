@@ -4,22 +4,22 @@ I ᴀᴍ Aᴅᴠᴀɴᴄᴇᴅ ᴀɴᴅ Pᴏᴡᴇʀғᴜʟʟ ᴍᴏᴠɪᴇ ᴘ
 ɪ ᴀᴍ ᴘᴍ sʜᴏʀᴛɴᴇʀ-ʟɪɴᴋ ʙᴏᴛ 
 Jᴜsᴛ Aᴅᴅ Tᴏ ᴍᴇ ɪɴ ʏᴏᴜʀ ᴏᴡɴ ɢʀᴏᴜᴘ Wɪᴛʜ Aᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴ I ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ᴍᴏᴠɪᴇs ɪɴ ʏᴏᴜʀ Mᴏᴠɪᴇ Gʀᴏᴜᴘ😍
 
-🌿 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲 : <a href='https://t.me/I_Am_MrAK'>𝐈 𝐀𝐦 𝙼𝚁𝗔𝗞</a></b>"""
+🌿 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲 : <a href='https://Cr3atives_Cortex'>𝐂𝐫𝐞𝐚𝐭𝐢𝐯𝐞 𝐂𝐨𝐫𝐭𝐞𝐱</a></b>"""
 
     GSTART_TXT = """ʜᴇʏ {},\n\nI ᴀᴍ Aᴅᴠᴀɴᴄᴇᴅ ᴀɴᴅ Pᴏᴡᴇʀғᴜʟʟ ᴍᴏᴠɪᴇ ᴘʀᴏᴠɪᴅᴇ ʙᴏᴛ [AWESOME Fɪʟᴇ Sᴛᴏʀᴇ ʙᴏᴛ] 
 ɪ ᴀᴍ ᴘᴍ sʜᴏʀᴛɴᴇʀ-ʟɪɴᴋ ʙᴏᴛ 
 Jᴜsᴛ Aᴅᴅ Tᴏ ᴍᴇ ɪɴ ʏᴏᴜʀ ᴏᴡɴ ɢʀᴏᴜᴘ Wɪᴛʜ Aᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴ I ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ᴍᴏᴠɪᴇs ɪɴ ʏᴏᴜʀ Mᴏᴠɪᴇ Gʀᴏᴜᴘ😍
 
-🌿 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲 : <a href='https://t.me/I_Am_MrAK'>𝐈 𝐀𝐦 𝙼𝚁𝗔𝗞</a></b>"""
+🌿 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲 : <a href='https://Cr3atives_Cortex'>𝐂𝐫𝐞𝐚𝐭𝐢𝐯𝐞 𝐂𝐨𝐫𝐭𝐞𝐱</a></b>"""
     
     HELP_TXT = """<b>Hᴇʏ {}
 Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.
 
-🌿 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲 : <a href='https://t.me/I_Am_MrAK'>𝐈 𝐀𝐦 𝙼𝚁𝗔𝗞</a></b>"""
+🌿 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲 : <a href='https://Cr3atives_Cortex'>𝐈 𝐀𝐦 𝙼𝚁𝗔𝗞</a></b>"""
 
     ABOUT_TXT = """<b>⍟───[ MY ᴅᴇᴛᴀɪʟꜱ ]───⍟
-‣ ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/I_Am_MrAK>𝐈 𝐀𝐦 𝙼𝚁𝗔𝗞</a>
- ‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/MrAK_Bots'>UPDATES</a> 
+‣ ᴍʏ ɴᴀᴍᴇ : <a href=https://Cr3atives_Cortex>𝐈 𝐀𝐦 𝙼𝚁𝗔𝗞</a>
+ ‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://Cr3atives_Cortex'>UPDATES</a> 
  ‣ ʟɪʙʀᴀʀʏ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢʀᴀᴍ</a> 
  ‣ ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 3</a> 
  ‣ ᴅᴀᴛᴀ ʙᴀsᴇ : <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏ ᴅʙ</a> 
@@ -27,8 +27,8 @@ Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.
  ‣ ʙᴜɪʟᴅ sᴛᴀᴛᴜs : ᴠ2.7.2 [sᴛᴀʙʟᴇ]></b>"""
 
     SOURCE_TXT = """
-<b>Tʜɪꜱ Bᴏᴛ Sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ɪs FREE .
-GitHub Repo : <a href='https://github.com/MrAKTech/MrAK-AutoFilter-Bot'>𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘</a>
+<b>Tʜɪꜱ Bᴏᴛ Sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ɪs 𝐏𝐀𝐈𝐃 .
+GitHub Repo : <a href='https://Cr3atives_Cortex'>REPO SELLER</a>
 Cᴏɴᴛᴀᴄᴛ : <a href='https://t.me/I_Am_MrAK'>𝐈 𝐀𝐦 𝙼𝚁𝗔𝗞</a> 🙃</b>"""
 
 
