@@ -1,18 +1,12 @@
-import os
+#Here's the corrected version of your `info.py` with the `IMDB` variable properly defined and all other parts integrated:
+
+```python
 import re
-import logging
-from os import getenv
-from Script import script
+from os import environ, getenv
+from Script import script 
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-
-# Regex pattern to match numeric IDs
 id_pattern = re.compile(r'^.\d+$')
-
 def is_enabled(value, default):
-    """Helper function to convert string to boolean."""
     if value.lower() in ["true", "yes", "1", "enable", "y"]:
         return True
     elif value.lower() in ["false", "no", "0", "disable", "n"]:
@@ -20,105 +14,96 @@ def is_enabled(value, default):
     else:
         return default
 
-# Check and fetch critical environment variables
-def get_env_variable(var_name, default=None, required=True):
-    """Fetches an environment variable or returns default if not found. Logs if required is True."""
-    value = os.environ.get(var_name, default)
-    if required and value is None:
-        logger.error(f"Error: {var_name} is not set!")
-        exit(1)
-    return value
-
 # Bot information
-SESSION = get_env_variable('SESSION', 'Media_search')
-API_ID = int(get_env_variable('API_ID', '20902603'))
-API_HASH = get_env_variable('API_HASH', '79e5caa103a9e9fb0183390b4800845d')
-BOT_TOKEN = get_env_variable('BOT_TOKEN', "7358459130:AAFG4DwbmI5rfyN9LMB410nEsYmgsZig5EE")
+SESSION = environ.get('SESSION', 'Media_search')
+API_ID = int(environ.get('API_ID', '20902603'))
+API_HASH = environ.get('API_HASH', '79e5caa103a9e9fb0183390b4800845d')
+BOT_TOKEN = environ.get('BOT_TOKEN', "7358459130:AAFG4DwbmI5rfyN9LMB410nEsYmgsZig5EE")
 
 # Bot settings
-CACHE_TIME = int(get_env_variable('CACHE_TIME', 300))
-USE_CAPTION_FILTER = bool(get_env_variable('USE_CAPTION_FILTER', True))
+CACHE_TIME = int(environ.get('CACHE_TIME', 300))
+USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = get_env_variable('PICS', 'https://envs.sh/kwZ.jpg https://envs.sh/kw5.jpg https://envs.sh/kwG.jpg https://envs.sh/kwY.jpg https://envs.sh/kwC.jpg ').split() # Sample PIC
-NOR_IMG = get_env_variable("NOR_IMG", "https://envs.sh/kw1.jpg")
-MELCOW_VID = get_env_variable("MELCOW_VID", "https://envs.sh/kwU.jpg")
-SPELL_IMG = get_env_variable("SPELL_IMG", "https://envs.sh/kwv.jpg")
-SUBSCRIPTION = get_env_variable('SUBSCRIPTION', 'https://envs.sh/kwl.jpg')
-CODE = get_env_variable('CODE', '0')
+PICS = (environ.get('PICS', 'https://envs.sh/kwZ.jpg https://envs.sh/kw5.jpg https://envs.sh/kwG.jpg https://envs.sh/kwY.jpg https://envs.sh/kwC.jpg ')).split()  # SAMPLE PIC
+NOR_IMG = environ.get("NOR_IMG", "https://envs.sh/kw1.jpg")
+MELCOW_VID = environ.get("MELCOW_VID", "https://envs.sh/kwU.jpg")
+SPELL_IMG = environ.get("SPELL_IMG", "https://envs.sh/kwv.jpg")
+SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://envs.sh/kwl.jpg'))
+CODE = (environ.get('CODE', '0'))
 
 # Stream link shortener
-STREAM_SITE = get_env_variable('STREAM_SITE', 'publicearn.com')
-STREAM_API = get_env_variable('STREAM_API', 'bcb93413e5dd9aaf092ab03269420e6f928aae2c')
-STREAMHTO = get_env_variable('STREAMHTO', 'https://t.me/sasukemovieschannel')
+STREAM_SITE = (environ.get('STREAM_SITE', 'publicearn.com'))
+STREAM_API = (environ.get('STREAM_API', 'bcb93413e5dd9aaf092ab03269420e6f928aae2c'))
+STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/sasukemovieschannel'))
 
-# Referral and premium settings
-REFERAL_COUNT = int(get_env_variable('REFERAL_COUNT', '225'))
-REFERAL_PREMEIUM_TIME = get_env_variable('REFERAL_PREMEIUM_TIME', '1month')
-PREMIUM_LOGS = int(get_env_variable('PREMIUM_LOGS', '-1002271986248'))
+# Referral
+REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '225'))  # number of referral count
+REFERAL_PREMEIUM_TIME = environ.get('REFERAL_PREMEIUM_TIME', '1month')
+# add premium logs channel id
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002271986248'))
 
 # Admins, Channels & Users
-USERNAME = get_env_variable("USERNAME", "https://t.me/Cr3atives_Cortex")
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in get_env_variable('ADMINS', '6283322330').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in get_env_variable('CHANNELS', '-1002439384019').split()]
-auth_users = [int(user) if id_pattern.search(user) else user for user in get_env_variable('AUTH_USERS', '6283322330').split()]
-AUTH_USERS = auth_users + ADMINS if auth_users else []
-PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in get_env_variable('PREMIUM_USER', '6283322330').split()]
-auth_channel = get_env_variable('AUTH_CHANNEL', '-1002397984715')
+USERNAME = environ.get("USERNAME", "https://t.me/Cr3atives_Cortex")
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6283322330').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002439384019').split()]  # Channel id for auto indexing ( make sure bot is admin )
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '6283322330').split()]
+AUTH_USERS = (auth_users + ADMINS) if auth_users else []
+PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '6283322330').split()]
+auth_channel = environ.get('AUTH_CHANNEL', '-1002397984715')  # Channel / Group Id for force sub ( make sure bot is admin )
+auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
-support_chat_id = get_env_variable('SUPPORT_CHAT_ID', '-1002328454530')
+AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002328454530')  # support group id ( make sure bot is admin )
+reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002419169098')  # request channel id ( make sure bot is admin )
+REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
+NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))  # True if you want no results messages in Log Channel
 
 # MongoDB information
-DATABASE_URI = get_env_variable('DATABASE_URI', "mongodb+srv://Mastersender:17032008@cluster0.dt8i8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_NAME = get_env_variable('DATABASE_NAME', "Cluster0")
-COLLECTION_NAME = get_env_variable('COLLECTION_NAME', 'Telegram_files')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Mastersender:17032008@cluster0.dt8i8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
-# Shortener configuration
-VERIFY = bool(get_env_variable('VERIFY', False))
-HOWTOVERIFY = get_env_variable('HOWTOVERIFY', '0')
-SHORTLINK_URL = get_env_variable('SHORTLINK_URL', 'publicearn.com')
-SHORTLINK_API = get_env_variable('SHORTLINK_API', 'bcb93413e5dd9aaf092ab03269420e6f928aae2c')
-IS_SHORTLINK = bool(get_env_variable('IS_SHORTLINK', True))
+# Shortener Variables
+VERIFY = bool(environ.get('VERIFY', False))  # Verification On ( True ) / Off ( False )
+HOWTOVERIFY = environ.get('HOWTOVERIFY', '0')  # How to open tutorial link for verification
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'publicearn.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'bcb93413e5dd9aaf092ab03269420e6f928aae2c')
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 
-# Miscellaneous
-WCHNL = get_env_variable('WCHNL', 'https://whatsapp.com/channel/0029Vaz8vJlDp2QBlKE0Ys1d')
-WRM = get_env_variable('WRM', 'https://t.me/sasukeweeklyrelease')
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in get_env_variable('DELETE_CHANNELS', '0').split()]
-MAX_B_TN = get_env_variable("MAX_B_TN", "5")
-MAX_BTN = is_enabled(get_env_variable('MAX_BTN', "True"), True)
-PORT = get_env_variable("PORT", "8080")
-GRP_LNK = get_env_variable('GRP_LNK', 'https://t.me/+VjiNsUiEbsozNGY1')
-CHNL_LNK = get_env_variable('CHNL_LNK', 'https://t.me/+Fmo0FrJ_iH8zMjQ9')
-TUTORIAL = get_env_variable('TUTORIAL', 'https://t.me/MrAK_LinkZz/5')
-IS_TUTORIAL = bool(get_env_variable('IS_TUTORIAL', True))
-MSG_ALRT = get_env_variable('MSG_ALRT', 'Hello Nanbha and Nanbis ❤️')
-LOG_CHANNEL = int(get_env_variable('LOG_CHANNEL', '-1002363029859'))
+# Others
+WCHNL = environ.get('WCHNL', 'https://whatsapp.com/channel/0029Vaz8vJlDp2QBlKE0Ys1d')
+WRM = environ.get('WRM', 'https://t.me/sasukeweeklyrelease')
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
+MAX_B_TN = environ.get("MAX_B_TN", "5")
+MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
+PORT = environ.get("PORT", "8080")
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+VjiNsUiEbsozNGY1')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+Fmo0FrJ_iH8zMjQ9')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/MrAK_LinkZz/5')  # Tutorial video link for opening shortlink website 
+IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
+MSG_ALRT = environ.get('MSG_ALRT', 'Hello Nanbha and Nanbis ❤️')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002363029859'))  # Log channel id ( make sure bot is admin )
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/+MQz7wwJDXO4zZDBl')  # Support group link ( make sure bot is admin )
+P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "false")), False)
+IMDB = bool(environ.get('IMDB', "False"))  # Ensure IMDB is defined
+AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
+AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
+SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", f"{script.IMDB_TEMPLATE_TXT}")
+LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "True"), True)
+SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
+MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
+INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1002264366396')).split()]
+MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
+PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "True")), True)
+PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 
-# Online stream and download settings
-NO_PORT = bool(get_env_variable('NO_PORT', False))
-APP_NAME = None
-if 'DYNO' in os.environ:
-    ON_HEROKU = True
-    APP_NAME = get_env_variable('APP_NAME', 'sasukemoviesbot.koyeb.app/')
-else:
-    ON_HEROKU = False
-BIND_ADRESS = getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0')
-FQDN = getenv('FQDN', BIND_ADRESS) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
-URL = "https://{}/".format(FQDN) if ON_HEROKU or NO_PORT else "https://{}/".format(FQDN, PORT)
-
-SLEEP_THRESHOLD = int(get_env_variable('SLEEP_THRESHOLD', '60'))
-WORKERS = int(get_env_variable('WORKERS', '4'))
-SESSION_NAME = get_env_variable('SESSION_NAME', 'LazyBot')
-MULTI_CLIENT = False
-
-# Log configuration
-logger.info("Current Customized Configurations:")
-logger.info(f"IMDB Results: {'Enabled' if IMDB else 'Disabled'}")
-logger.info(f"Spell Check Mode: {'Enabled' if SPELL_CHECK_REPLY else 'Disabled'}")
-logger.info(f"MAX_BTN: {MAX_BTN}")
-logger.info(f"Custom File Caption: {CUSTOM_FILE_CAPTION if CUSTOM_FILE_CAPTION else 'Default Caption'}")
-
-# Make sure to validate all critical settings here
-if not BOT_TOKEN or not API_ID:
-    logger.error("Critical error: BOT_TOKEN or API_ID is missing. Exiting.")
-    exit(1)
+LANGUAGES = ["Tamil", "Tam", "Telugu", "Tel", "Kannada", "kan", "Malayalam", "Mal", "Hindi", "Hin", "English", "Eng", "Korean", "Kor", "Japanese", "Jap", "Chinese", "Chi", "Dual", "Multi"]
+YEARS = ["1900", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"]
+SEASONS = ["season 1", "season 2", "season 3", "season 4", "season 5", "season 6", "season 7", "season 8", "season 9", "season 10"]
+EPISODES = ["E01", "E02", "E03", "E04", "E05", "E06", "E07", "E08", "E09", "E10", "E11", "E12", "E13", "E14", "E15", "E16", "E17", "E18", "E19", "E20", "E21", "E22", "E23", "E24", "E25", "E26", "E27", "E28", "E29", "E30", "E31", "E32", "E33", "E34", "E35", "E36", "E37", "E38", "E39", "E40"]
+QUALITIES = ["240p", "360p", "480p", "720p", "1080p", "1440p", "2160p", "4K", "HQ", "HD", "HQPreDVD
