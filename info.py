@@ -106,13 +106,13 @@ EPISODES = ["E01", "E02", "E03", "E04", "E05", "E06", "E07", "E08", "E09", "E10"
 QUALITIES = ["240p", "360p", "480p", "720p", "1080p", "1440p", "2160p", "4K", "HQ", "HD","HQPreDVD","PreDVD"]
 
 # Online Stream and Download
-NO_PORT = bool(environ.get('NO_PORT', True))
+NO_PORT = bool(environ.get('NO_PORT', False))
 APP_NAME = None
 if 'DYNO' in environ:
     ON_HEROKU = True
     APP_NAME = environ.get('APP_NAME', 'sasukemoviesbot.koyeb.app/')
 else:
-    ON_HEROKU = True
+    ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
 URL = "https://{}/".format(FQDN) if ON_HEROKU or NO_PORT else \
